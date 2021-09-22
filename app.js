@@ -15,7 +15,8 @@ app.get('/',function(req,res){
 
 
 app.use('/authentication',require('./routes/authentication/login'));
-
+app.use('/user',require('./routes/user/createUser'));
+app.use('/user',require('./routes/user/listUser'));
 
 app.post('/postData',function(req,res){
     
@@ -37,7 +38,6 @@ console.log("server runnning "+3000);
 
 
 
-//1) 2 parameter/value send to server
-//2) 3 route 1 post, 2 get
-//3) add 1 package - ip
-//4) app.use - seperate file/folder  - google
+//localhost:3000/user/api/createUser  (POST)
+//localhost:3000/user/api/listUser (GET)
+//localhost:3000/authentication/api/login (POST)
